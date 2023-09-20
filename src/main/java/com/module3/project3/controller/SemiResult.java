@@ -19,6 +19,10 @@ public class SemiResult extends HttpServlet {
                 req.setAttribute("resultVal", qs6);
                 RequestDispatcher requestDispatcher = req.getRequestDispatcher("WEB-INF/result.jsp");
                 requestDispatcher.forward(req, resp);
+            } else if (qs6.equals("no")){
+                req.setAttribute("resultVal", qs6);
+                RequestDispatcher requestDispatcher = req.getRequestDispatcher("WEB-INF/result.jsp");
+                requestDispatcher.forward(req, resp);
             }
         }
 
