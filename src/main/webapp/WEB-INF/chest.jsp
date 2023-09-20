@@ -12,10 +12,16 @@
 <main>
   <h2>Question 6</h2>
   <p>Your answer was correct. The mermaid-like creature smiles and grants you access to a hidden treasure chest. Would you take it directly from her?</p>
-  <form action="/semiResult-servlet" method="get">
-    <input type="radio" name="qs6" value="no"/>No, you won't take the treasure directly; you acknowledge the creature's kindness.
-    <input type="radio" name="qs6" value="yes" />Yes, you decide to take the treasure directly from the creature.
-    <input type="radio" name="qs6" value="uncertain" />What mermaid? Am I still sleeping?
+  <form action="/riddle-servlet" method="post">
+    <label>
+      <input type="radio" name="qs6" value="no"/> No, you won't take the treasure directly; you acknowledge the creature's kindness.
+    </label>
+    <label>
+      <input type="radio" name="qs6" value="yes" /> Yes, you decide to take the treasure directly from the creature.
+    </label>
+    <label>
+      <input type="radio" name="qs6" value="uncertain" /> What mermaid? Am I still sleeping?
+    </label>
     <button id="submit" name="submit" class="submit0btn">Continue</button>
   </form>
 </main>

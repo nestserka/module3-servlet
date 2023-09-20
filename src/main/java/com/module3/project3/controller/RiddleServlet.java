@@ -18,4 +18,17 @@ public class RiddleServlet extends HttpServlet {
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("WEB-INF/chest.jsp");
         requestDispatcher.forward(req, resp);
     }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+        String qs6 = req.getParameter("qs6");
+        if((qs6.equals("uncertain")) || (qs6.equals("no")) || (qs6.equals("run")) || (qs6.equals("hit"))) {
+            req.setAttribute("resultVal", qs6);
+            RequestDispatcher requestDispatcher = req.getRequestDispatcher("WEB-INF/result.jsp");
+            requestDispatcher.forward(req, resp);
+        } else {
+            RequestDispatcher requestDispatcher = req.getRequestDispatcher("WEB-INF/final.jsp");
+            requestDispatcher.forward(req, resp);
+        }
+    }
 }

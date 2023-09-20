@@ -13,7 +13,7 @@
   <h2>Ahhh...you failed again</h2>
   <p>You head to the bustling town, where locals recognize you and kick you out of their town. You have no other choice but to return back and go to the forest.</p>
   <p>One step back, maybe you never will be able to remember who are you</p>
-  <a class="button-continue" href="/quiz-servlet">Yes</a>
+  <a class="submit0btn" href="/quiz-servlet">Yes</a>
 </main>
 </body>
 </html>

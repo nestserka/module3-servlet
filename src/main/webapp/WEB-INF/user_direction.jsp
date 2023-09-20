@@ -14,8 +14,12 @@
   <p>You come across a fork in the road. One path leads into a dark forest, and the other leads to a bustling town. Which path will you choose?</p>
   <form action="/quiz-servlet" method="post">
     <input type="hidden" name="action" value="qs3">
-    <input type="radio" name="qs3" value="forest"/>Dark forest
-    <input type="radio" name="qs3" value="village" />Bustling village
+    <label>
+      <input type="radio" name="qs3" value="forest"/> Dark forest
+    </label>
+    <label>
+      <input type="radio" name="qs3" value="village" /> Bustling village
+    </label>
     <button id="submit" name="submit" class="submit0btn">Continue</button>
   </form>
 </main>

@@ -16,8 +16,12 @@
   <p>You left <%= s %>  and arrived at a bridge, where the officer asks for your name. Will you: </p>
   <form action="/quest-servlet" method="post">
     <input type="hidden" name="action" value="qs2">
-    <input type="radio" name="qs2" value="lie"/>Lie
-    <input type="radio" name="qs2" value="truth" />Tell the truth
+    <label>
+      <input type="radio" name="qs2" value="lie"/> Lie
+    </label>
+    <label>
+      <input type="radio" name="qs2" value="truth" /> Tell the truth
+    </label>
     <button id="submit" name="submit" class="submit0btn">Continue</button>
   </form>
 </main>

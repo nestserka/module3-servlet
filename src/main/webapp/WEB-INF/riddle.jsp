@@ -12,9 +12,11 @@
 <main>
   <h2>Question 5 </h2>
   <p>You continue your journey. In the heart of the forest, you find a magical pool with a mermaid-like creature. She beckons you closer and poses her riddle: "I'm always hungry, I must always be fed. The finger I touch will soon turn red. What am I?"</p>
-    <input type="hidden" name="action" value="qs5">
-    <input id="answer" name="answer" type="text" placeholder="Type your answer here here">
+  <div class="description">
+  <input type="hidden" name="action" value="qs5">
+    <input id="answer" class="text-desc" name="answer" type="text" placeholder="Type your answer here here">
     <button id="submit" name="submit" class="submit0btn" onclick="checkCorrectAnswer()">Continue</button>
+  </div>
   <div id="message"></div>
 </main>
 

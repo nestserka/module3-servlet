@@ -12,7 +12,7 @@
 <main>
   <h2>You passed</h2>
   <p> Contemplating a deceptive response, you briefly consider providing a false name. Eventually, you decide to fabricate an identity, and the officer, unaware of the ruse, permits you to proceed.</p>
-  <a class="button-continue" href="/quiz-servlet">Yes</a>
+  <a class="submit0btn" href="/quiz-servlet">Continue</a>
 </main>
 </body>
 </html>

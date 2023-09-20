@@ -14,9 +14,15 @@
   <p>You venture into the dark forest, hoping to find clues about your past. You stumble upon an old journal with your name in it, providing some hints about your identity. Under the stone you found</p>
   <form action="/quiz-servlet" method="post">
     <input type="hidden" name="action" value="qs4">
-    <input type="radio" name="qs4" value="neckless"/>Wolf neckless
-    <input type="radio" name="qs4" value="computer" />Old computer
-    <input type="radio" name="qs4" value="money" />Suitcase with money
+    <label>
+      <input type="radio" name="qs4" value="neckless"/> Wolf necklace
+    </label>
+    <label>
+      <input type="radio" name="qs4" value="computer" /> Old computer
+    </label>
+    <label>
+      <input type="radio" name="qs4" value="money" /> Suitcase with money
+    </label>
     <button id="submit" name="submit" class="submit0btn">Continue</button>
   </form>
 </main>
