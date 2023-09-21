@@ -15,39 +15,120 @@ import java.io.PrintWriter;
 @WebServlet(name = "questServlet", value = "/quest-servlet")
 public class QuestServlet extends HttpServlet {
 
-    public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("WEB-INF/room.jsp");
-        requestDispatcher.forward(req, resp);
+    public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.getRequestDispatcher( "WEB-INF/room.jsp").forward(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        if (req.getParameter("action").equals("qs1")) {
-            updateFirstQsForm(req,resp);
+        String action = req.getParameter("action");
+        if (action != null) {
+            switch (action) {
+                case "qs1":
+                    updateFirstQuestion(req, resp);
+                    break;
+                case"qs2":
+                    updateSecondQuestion(req, resp);
+                    break;
+                case "qs3":
+                    updateThirdQuestion(req, resp);
+                    break;
+                case "qs4":
+                    updateForthQuestion(req,resp);
+                    break;
+                default:
+                    updateSixthQuestion(req, resp);
+                    break;
+            }
         } else {
-            updateSecondQsForm(req,resp);
+            forwardToErrorPage(req, resp, "Action parameter is missing.");
         }
     }
 
-    private void updateFirstQsForm(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        HttpSession session = req.getSession(true);
-        String place = req.getParameter("place");
-        session.setAttribute("place", place);
-        session.setAttribute("ipAddress", req.getRemoteAddr());
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("WEB-INF/bridge.jsp");
-        requestDispatcher.forward(req, resp);
+    private void updateFirstQuestion(HttpServletRequest req, HttpServletResponse resp)  {
+        try {
+            HttpSession session = req.getSession();
+            String place = req.getParameter("place");
+            session.setAttribute("place", place);
+            req.getRequestDispatcher("WEB-INF/bridge.jsp").forward(req, resp);
+        } catch (ServletException | IOException e) {
+            forwardToErrorPage(req, resp, e.getMessage());
+        }
     }
 
-    private void updateSecondQsForm(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    private void  updateSecondQuestion(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String q2 = req.getParameter("qs2");
-        RequestDispatcher requestDispatcher;
-
-        if (q2.equals("lie")) {
-            requestDispatcher = req.getRequestDispatcher("WEB-INF/q2_feedback.jsp");
-        } else {
-            requestDispatcher = req.getRequestDispatcher("WEB-INF/game_over.jsp");
+        try {
+            if (q2.equals("lie")) {
+                req.getRequestDispatcher("WEB-INF/user_direction.jsp").forward(req, resp);
+            } else {
+                req.getRequestDispatcher("WEB-INF/game_over.jsp").forward(req, resp);
+                req.getSession().invalidate();
+            }
+        } catch (ServletException | IOException e) {
+            forwardToErrorPage(req, resp, e.getMessage());
         }
-
-        requestDispatcher.forward(req, resp);
     }
+
+    private void updateThirdQuestion(HttpServletRequest req, HttpServletResponse resp)  {
+        String qs3 = req.getParameter("qs3");
+        try {
+            if (qs3 != null && !qs3.isEmpty()) {
+                HttpSession session = req.getSession();
+                session.setAttribute("direction", qs3);
+                if (qs3.equals("forest")) {
+                    req.getRequestDispatcher("WEB-INF/forest.jsp").forward(req, resp);
+                } else {
+                    req.getRequestDispatcher("WEB-INF/town.jsp").forward(req, resp);
+                }
+            }
+        } catch (ServletException | IOException e) {
+            forwardToErrorPage(req, resp, e.getMessage());
+        }
+    }
+
+    private void updateForthQuestion(HttpServletRequest req, HttpServletResponse resp) {
+        String qs4 = req.getParameter("qs4");
+        try {
+            if (qs4 != null && !qs4.isEmpty()) {
+                HttpSession session = req.getSession();
+                session.setAttribute("item", qs4);
+                req.getRequestDispatcher("WEB-INF/riddle.jsp").forward(req, resp);
+            }
+        } catch (ServletException | IOException e) {
+            forwardToErrorPage(req, resp, e.getMessage());
+        }
+    }
+
+    private void updateSixthQuestion(HttpServletRequest req, HttpServletResponse resp) {
+        String qs6 = req.getParameter("qs6");
+        try {
+            if((qs6.equals("uncertain")) || (qs6.equals("no")) || (qs6.equals("run")) || (qs6.equals("hit"))) {
+                req.setAttribute("resultVal", qs6);
+                req.getRequestDispatcher("WEB-INF/result.jsp").forward(req, resp);
+            } else {
+                req.getRequestDispatcher("WEB-INF/final.jsp").forward(req, resp);
+            }
+        } catch (ServletException | IOException e) {
+            forwardToErrorPage(req, resp, e.getMessage());
+        }
+    }
+
+    private void forwardToErrorPage(HttpServletRequest req, HttpServletResponse resp, String errorMessage) {
+        resp.setContentType("text/html");
+        try {
+            PrintWriter out = resp.getWriter();
+            out.println("<html><head><title>Error</title></head><body>");
+            out.println("<h1>Error</h1>");
+            out.println("<p>" + errorMessage + "</p>");
+            out.println("</body></html>");
+            out.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
 }
+
+

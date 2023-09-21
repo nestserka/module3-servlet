@@ -5,26 +5,43 @@
 <head>
   <link href="<c:url value="/css/styles.css" />" rel="stylesheet">
   <link rel="icon" href="<c:url value="/icon/favicon-32x32.png" />">
-  <title>Module 3: final project</title>
+  <title>Memory Quest</title>
 </head>
 <body>
 <header><h1>The Quest of Forgotten Memories</h1></header>
 <main>
   <h2>Question 4</h2>
   <p>You venture into the dark forest, hoping to find clues about your past. You stumble upon an old journal with your name in it, providing some hints about your identity. Under the stone you found</p>
-  <form action="/quiz-servlet" method="post">
+  <form action="/quest-servlet" method="post">
     <input type="hidden" name="action" value="qs4">
     <label>
-      <input type="radio" name="qs4" value="neckless"/> Wolf necklace
+      <input type="radio" name="qs4" value="neckless" required/> Wolf necklace
     </label>
     <label>
-      <input type="radio" name="qs4" value="computer" /> Old computer
+      <input type="radio" name="qs4" value="computer" required/> Old computer
     </label>
     <label>
-      <input type="radio" name="qs4" value="money" /> Suitcase with money
+      <input type="radio" name="qs4" value="money" required/> Suitcase with money
     </label>
     <button id="submit" name="submit" class="submit0btn">Continue</button>
   </form>
 </main>
+<footer class="footer">
+  <div class="footer-item">
+    <a href="https://github.com/nestserka"
+    ><img src="<c:url value="/icon/git.png"/>" alt="Git"
+    /></a>
+  </div>
+  <div class="footer-item">
+    <a href="https://www.instagram.com/mercy_codes/?igshid=NGVhN2U2NjQ0Yg%3D%3D"
+    ><img src="<c:url value="/icon/instagram.png"/>" alt="Instagram"
+    /></a>
+  </div>
+  <div class="footer-item">
+    <a href="https://medium.com/@nestserka"
+    ><img src="<c:url value="/icon/medium.png"/>" alt="Medium"
+    /></a>
+  </div>
+</footer>
 </body>
 </html>

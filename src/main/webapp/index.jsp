@@ -5,13 +5,13 @@
 <head>
     <link href="<c:url value="/css/styles.css" />" rel="stylesheet">
     <link rel="icon" href="<c:url value="/icon/favicon-32x32.png" />">
-    <title>Module 3: final project</title>
+    <title>Memory Quest</title>
 </head>
 <body>
 <header><h1>The Quest of Forgotten Memories</h1></header>
 <main>
-    <p>
-    Welcome to "The Quest of Forgotten Memories". In this adventure, you wake up with no recollection of your past.
+    <h2>Welcome to "The Quest of Forgotten Memories"</h2>
+    <p>In this adventure, you wake up with no recollection of your past.
     As you explore this enigmatic world, you'll face challenges, solve riddles, and make decisions that
     shape your quest to recover your lost memories. Are you ready to begin your journey and uncover the secrets within?
     </p>
@@ -21,7 +21,23 @@
     </div>
     <div id="message"></div>
 </main>
-
+<footer class="footer">
+    <div class="footer-item">
+        <a href="https://github.com/nestserka"
+        ><img src="<c:url value="/icon/git.png"/>" alt="Git"
+        /></a>
+    </div>
+    <div class="footer-item">
+        <a href="https://www.instagram.com/mercy_codes/?igshid=NGVhN2U2NjQ0Yg%3D%3D"
+        ><img src="<c:url value="/icon/instagram.png"/>" alt="Instagram"
+        /></a>
+    </div>
+    <div class="footer-item">
+        <a href="https://medium.com/@nestserka"
+        ><img src="<c:url value="/icon/medium.png"/>" alt="Medium"
+        /></a>
+    </div>
+</footer>
 <script>
     function showMessage() {
         const messageContainer = document.getElementById('message');

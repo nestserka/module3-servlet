@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Inter&family=PT+Serif&family=Source+Code+Pro:wght@300&display=swap');
+
 * {
     box-sizing: border-box;
 }
@@ -9,6 +11,9 @@ body, html {
     color:	black;
     height:100%;
     width:100%;
+    font-family: 'PT Serif', serif;
+    display:flex;
+    flex-direction: column;
 }
 
 header{
@@ -37,7 +42,7 @@ h2{
 main{
     height: 55vh;
     padding:40px 20px 20px;
-    margin:0 auto;
+    margin: auto;
     width:60%;
     position: relative;
     display:flex;
@@ -45,12 +50,34 @@ main{
     flex-direction: column;
     border-radius: 46px;
     background: #FF8C00;
+    border: 1px solid white;
 }
 
 footer{
     height:10vh;
-    padding:20px;
-    background-color: white;
+    border: 3px solid white;
+    background-color: black;
+    margin-top: auto;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:15px;
+}
+
+.footer-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-item img {
+    display: block;
+    height: 40px;
+    width: 40px;
+    opacity:0.7;
+}
+
+.footer-item img:hover{
+    opacity:1;
 }
 
 main p{
@@ -75,7 +102,7 @@ a.button-choice{
     border-radius:0.12em;
     box-sizing: border-box;
     text-decoration:none;
-    font-family:'Roboto',sans-serif;
+    font-family: 'PT Serif', serif;
     font-weight:300;
     font-size:24px;
     text-transform: uppercase;
@@ -84,7 +111,7 @@ a.button-choice{
     color:black;
 }
 a.button-choice:hover{
-    color:#FF8C00;
+    color:white;
     background-color:black;
 }
 
@@ -107,6 +134,8 @@ a.button-choice:hover{
 label {
     display:block;
     margin-bottom: 10px;
+    font-family: 'PT Serif', serif;
+    font-size:20px;
 }
 
 
@@ -116,7 +145,8 @@ label {
     background: rgb(31, 32, 35);
     border: 1px solid rgb(60, 63, 68);
     border-radius: 4px;
-    font-size: 13px;
+    font-size: 16px;
+    font-family: 'PT Serif', serif;
     color: #FF8C00;
     height: 46px;
     appearance: none;
@@ -127,6 +157,7 @@ label {
     outline: none;
     box-shadow: none;
     border-color: rgb(255, 140, 0);
+    font-family: 'PT Serif', serif;
 }
 
 
@@ -140,7 +171,7 @@ label {
     color: #ff8c00;
     cursor: pointer;
     display: inline-block;
-    font-family: ITCAvantGardeStd-Bk,Arial,sans-serif;
+    font-family: 'PT Serif', serif;
     font-size: 15px;
     font-weight: 400;
     line-height: 20px;
@@ -155,6 +186,11 @@ label {
     vertical-align: middle;
     white-space: nowrap;
     width:110px;
+    text-decoration: none;
+}
+
+.submit0btn a{
+    text-decoration: none;
 }
 
 .submit0btn:focus {
@@ -179,5 +215,28 @@ input[type=radio] {
     accent-color: black;
     width:16px;
     height:16px;
+}
+
+.result-wrapper{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    gap:15px;
+    margin-top:15px;
+
+}
+
+#final-result{
+    text-transform: uppercase;
+    font-size:26px;
+    color:white;
+    font-family: 'PT Serif', serif;
+}
+
+#text{
+    font-size:24px;
+    font-family: 'PT Serif', serif;
+    padding: 0 50px;
 }
 
