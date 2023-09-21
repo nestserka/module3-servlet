@@ -10,9 +10,9 @@
 <body>
 <header><h1>The Quest of Forgotten Memories</h1></header>
 <main>
-  <h2>Ahhh...you failed again</h2>
-  <p>You head to the bustling town, where locals recognize you and kick you out of their town. You have no other choice but to return back and go to the forest. One step back, maybe you never will be able to remember who are you</p>
-  <a class="submit0btn" href="/quiz-servlet">Yes</a>
+  <h2>GAVE OVER</h2>
+  <p>You head to the bustling town, where locals recognize you. However, there were not too happy to see you. As a result someone hit in the head and drag you back. </p>
+  <a class="submit0btn" href="/quest-servlet">Restart</a>
 </main>
 <footer class="footer">
   <div class="footer-item">

@@ -240,3 +240,16 @@ input[type=radio] {
     padding: 0 50px;
 }
 
+.statistics-wrapper{
+    display:flex;
+    flex-direction: column;
+    gap:15px;
+    padding: 20px;
+}
+
+h6{
+    font-size: 24px;
+    color:black;
+    margin:0;
+    padding:0;
+}

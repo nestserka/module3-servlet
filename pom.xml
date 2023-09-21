@@ -5,8 +5,7 @@
   <artifactId>module3_final_project</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>module3-final-project Maven Webapp</name>
-  <url>http://maven.apache.org</url>
+  <name>module3-final-project</name>
   <dependencies>
     <dependency>
       <groupId>jakarta.servlet</groupId>
@@ -24,19 +23,18 @@
       <artifactId>jakarta.servlet.jsp.jstl</artifactId>
       <version>2.0.0</version>
     </dependency>
-<!--    <dependency>-->
-<!--      <groupId>org.junit.jupiter</groupId>-->
-<!--      <artifactId>junit-jupiter-api</artifactId>-->
-<!--      <version>${junit.version}</version>-->
-<!--      <scope>test</scope>-->
-<!--    </dependency>-->
-<!--    <dependency>-->
-<!--      <groupId>org.junit.jupiter</groupId>-->
-<!--      <artifactId>junit-jupiter-engine</artifactId>-->
-<!--      <version>${junit.version}</version>-->
-<!--      <scope>test</scope>-->
-<!--    </dependency>-->
-
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <version>5.10.0</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <version>5.10.0</version>
+      <scope>test</scope>
+    </dependency>
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>

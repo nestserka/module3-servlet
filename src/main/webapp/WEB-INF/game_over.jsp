@@ -15,7 +15,7 @@
     The officer's expression changes from suspicion to confusion. He looks at you skeptically, unable to comprehend how someone could forget their own name.
     The officer becomes convinced that you must be a suspicious character and takes you to prison.
   </p>
-  <p>P.S. Your session has been terminated. </p>
+  <a class="submit0btn" href="/quest-servlet">Restart</a>
 </main>
 <footer class="footer">
   <div class="footer-item">

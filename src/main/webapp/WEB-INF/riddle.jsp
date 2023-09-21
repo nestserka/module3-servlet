@@ -49,7 +49,7 @@
       messageDiv.style.color = "green";
       setTimeout(function() {
         messageDiv.innerHTML = '';
-        window.location.href = "/riddle-servlet";
+        window.location.href = "/result";
       },1000);
     } else {
       messageDiv.innerHTML = "Incorrect answer. Please try again.";
@@ -60,10 +60,10 @@
       }, 2500);
     }
     if(count === 3) {
-      messageDiv.innerHTML = "You tried 3 times. Game is over for you";
+      messageDiv.innerHTML = "You tried 3 times. Game over.";
       setTimeout(function() {
         messageDiv.innerHTML = '';
-        window.location.href = "initServlet";
+        window.location.href = "/quest-servlet";
       }, 3500);
     }
   }

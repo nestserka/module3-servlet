@@ -15,7 +15,10 @@
   <div class="result-wrapper">
   <div id="final-result"></div>
   <div id="text"></div>
+    <div class="wrapper">
     <a class="submit0btn" onclick="restart()">Main</a>
+    <a class="submit0btn" href="/statistics">Statistics</a>
+    </div>
   </div>
 </main>
 <footer class="footer">
@@ -59,7 +62,7 @@
     }
   }
   function restart() {
-    fetch('/riddle-servlet', {
+    fetch('/result', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json;',
