@@ -11,7 +11,8 @@
 <header><h1>The Quest of Forgotten Memories</h1></header>
 <main>
   <h2>Question 4</h2>
-  <p>You venture into the dark forest, hoping to find clues about your past. You stumble upon an old journal with your name in it, providing some hints about your identity. Under the stone you found</p>
+  <p>Contemplating a deceptive response, you briefly consider providing a false name. Eventually, you decide to fabricate an identity, and the officer, unaware of the ruse, permits you to proceed.
+    You venture into the dark forest, hoping to find clues about your past. You stumble upon an old journal with your name in it, providing some hints about your identity. Under the stone you found</p>
   <form action="/quest-servlet" method="post">
     <input type="hidden" name="action" value="qs4">
     <label>

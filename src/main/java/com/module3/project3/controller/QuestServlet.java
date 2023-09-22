@@ -9,7 +9,7 @@ import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
 
 
-@WebServlet(name = "questServlet", value = "/quest-servlet")
+@WebServlet(name = "questServlet", value = "/quest")
 public class QuestServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -23,9 +23,6 @@ public class QuestServlet extends HttpServlet {
             switch (action) {
                 case "qs1":
                     updateFirstQuestion(req, resp);
-                    break;
-                case"qs2":
-                    updateSecondQuestion(req, resp);
                     break;
                 case "qs3":
                     updateThirdQuestion(req, resp);
@@ -46,19 +43,6 @@ public class QuestServlet extends HttpServlet {
             String place = req.getParameter("place");
             session.setAttribute("place", place);
             req.getRequestDispatcher("WEB-INF/bridge.jsp").forward(req, resp);
-        } catch (Exception e) {
-            throw new ServletException("User input is null or incorrect");
-        }
-    }
-
-    private void  updateSecondQuestion(HttpServletRequest req, HttpServletResponse resp) throws ServletException {
-        String q2 = req.getParameter("qs2");
-        try {
-            if (q2.equals("lie")) {
-                req.getRequestDispatcher("WEB-INF/user_direction.jsp").forward(req, resp);
-            } else {
-                req.getRequestDispatcher("WEB-INF/game_over.jsp").forward(req, resp);
-            }
         } catch (Exception e) {
             throw new ServletException("User input is null or incorrect");
         }
