@@ -1,32 +1,48 @@
 package com.module3.project3.controller;
 
-import com.module3.project3.entity.JsonParser;
+import com.module3.project3.service.QuestService;
+import com.module3.project3.service.UserService;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
-
-import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
-import java.sql.Timestamp;
-import java.util.Properties;
 
-@WebServlet(name = "initServlet", value = "/start")
+
+@WebServlet(name = "initServlet", value = "/login")
 public class InitServlet extends HttpServlet {
+
+    UserService userService = new UserService();
+    QuestService questService = new QuestService();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        HttpSession session = req.getSession(true);
-//        ** parse was called in order to create the json file for the quest
-//        JsonParser ps = new JsonParser();
-//        ps.createJsonFile();
-        String api =  req.getRemoteAddr();
-        session.setAttribute("ipAddress", api);
-        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-        session.setAttribute("gameTime",timestamp.getTime());
+//        ** parse was called in order to create the json file for the quests
+//        questService.createQuestList();
         getServletContext().getRequestDispatcher("/login.jsp").forward(req, resp);
     }
-}
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        userService.saveUserById(req);
+        resp.sendRedirect("/quest");
+    }
+
+
+
+
+//        // ЗАПИСАЛИ НОВЫЕ ДАННЫЕ В БАЗУ ДАННЫХ
+//        userService.updateUserById(id, newLogin, newPassword);
+//
+//        // ВЫВЕДЕМ И НА КОНСОЛЬ
+//        System.out.println(userService.getUserById(id));
+//
+//        // ИДЕМ ОПЯТЬ НА ТУ ЖЕ СТРАНИЦУ И УВИДИМ НА СТРАНИЦЕ ИЗМЕНЕНИЯ
+//        User userById = userService.getUserById(id);
+//        request.setAttribute("user", userById);
+//
+//        RequestDispatcher requestDispatcher = request.getRequestDispatcher("WEB-INF/user.jsp");
+//        requestDispatcher.forward(request, response);
+
+    }

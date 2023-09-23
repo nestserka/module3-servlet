@@ -1,0 +1,83 @@
+{
+  "quest":[
+    {
+      "questName":"The Quest of Forgotten Memories",
+      "questions":[
+        {
+          "qsAnswers":"[\"QS_1\"]",
+          "qsNo":"Q-1",
+          "qsDescription":"You awaken disoriented and with no memory of who you are or how you got here. As your eyes adjust to the faint light, you notice an open journal on the table beside you. Where did you wake up with no memory?",
+          "qsType":"input"
+        },
+        {
+          "qsAnswers":"[\"QS_2\",\"QS_2_FALSE\"]",
+          "qsNo":"Q-2",
+          "qsDescription":"You left and arrived at a bridge, where the officer asks for your name. Will you:",
+          "qsType":"radio"
+        },
+        {
+          "qsAnswers":"[\"QS_3_1\",\"QS_3_2\",\"QS_3_3\"]",
+          "qsNo":"Q-3",
+          "qsDescription":"Contemplating a deceptive response, you briefly consider providing a false name. Eventually, you decide to fabricate an identity, and the officer, unaware of the ruse, permits you to proceed. You venture into the dark forest, hoping to find clues about your past. You stumble upon an old journal with your name in it, providing some hints about your identity. Under the stone you found",
+          "qsType":"radio"
+        },
+        {
+          "qsAnswers":"[\"QS_4_1\",\"QS_4_2\",\"QS_4_3\"]",
+          "qsNo":"Q-4",
+          "qsDescription":"You continue your journey. In the heart of the forest, you find a magical pool with a mermaid-like creature. She beckons you closer and poses her riddle: \"I'm always hungry, I must always be fed. The finger I touch will soon turn red. What am I?",
+          "qsType":"radio"
+        },
+        {
+          "qsAnswers":"[\"QS_5_1\",\"QS_5_2\",\"QS_5_3\",\"QS_5_4\"]",
+          "qsNo":"Q-5",
+          "qsDescription":"Your answer was correct. The mermaid-like creature smiles and grants you access to a hidden treasure chest. Would you take it directly from her?",
+          "qsType":"radio"
+        },
+        {
+          "qsAnswers":"null",
+          "qsNo":"R-6",
+          "qsDescription":"You decide to take the treasure directly from the creature, ignoring any potential risks. Creature took you under water. Game Over.",
+          "qsType":"result"
+        },
+        {
+          "qsAnswers":"null",
+          "qsNo":"R-7",
+          "qsDescription":"The creature lunges at you, but you deftly evade its attack, demonstrating your combat prowess. With swift and precise strikes, you fend off the creature, driving it back. Your skills resemble those of a masterful monster hunter.As you defeat the mermaid-like creature, a newfound sense of identity washes over you. You are not just anyone; you are a Witcher, a skilled warrior who specializes in combating monsters and protecting the world from supernatural threats. Your lost memory may still hold many secrets, but you now know your true calling.",
+          "qsType":"result"
+        },
+        {
+          "qsAnswers":"null",
+          "qsNo":"R-1",
+          "qsDescription":"Feeling a pang of uncertainty, you decide to tell the truth about your name, even though you can't quite recall it. You admit that you don't remember your name due to amnesia. The officer's expression changes from suspicion to confusion. He looks at you skeptically, unable to comprehend how someone could forget their own name. The officer becomes convinced that you must be a suspicious character and takes you to prison.",
+          "qsType":"result"
+        },
+        {
+          "qsAnswers":"null",
+          "qsNo":"R-2",
+          "qsDescription":"Wrong answer. Creature took you under water and killed. Gave over.",
+          "qsType":"result"
+        },
+        {
+          "qsAnswers":"null",
+          "qsNo":"R-3",
+          "qsDescription":"Wrong answer. Way too wrong answer. Creature does not even knows what pan is. Game over.",
+          "qsType":"result"
+        },
+        {
+          "qsAnswers":"null",
+          "qsNo":"R-4",
+          "qsDescription":"You choose not to take the treasure directly, acknowledging the creature's kindness. It turns out that the mermaid-like creature was not a foe but a guardian, protecting lost souls from their own greed. As a result of your compassion, you've brought safety to this enchanted place, and the creature expresses its gratitude. However: you still do not know who you are.",
+          "qsType":"result"
+        },
+        {
+          "qsAnswers":"null",
+          "qsNo":"R-5",
+          "qsDescription":"You suddenly find yourself questioning the reality of the mermaid-like creature and your entire journey. Just as you say this, you wake up in a hospital bed, surrounded by medical equipment. It turns out that your entire adventure was a vivid dream. You've regained consciousness, and your memory slowly starts returning as the fog lifts.",
+          "qsType":"result"
+        }
+      ],
+      "description":"Welcome to \"The Quest of Forgotten Memories\". In this adventure, you wake up with no recollection of your past.\nAs you explore this enigmatic world, you'll face challenges, solve riddles, and make decisions that\nshape your quest to recover your lost memories. Are you ready to begin your journey and uncover the secrets within?",
+      "id":1
+    }
+  ]
+}

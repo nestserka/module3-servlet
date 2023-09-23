@@ -11,45 +11,45 @@
 <body>
 <section class="vh-100 bg-image"
          style="background-image: url('https://images.unsplash.com/photo-1694376015496-140430f9bf88?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2128&q=80');">
-  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+  <div class="mask d-flex align-items-center h-100">
     <div class="container h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-12 col-md-9 col-lg-7 col-xl-6">
           <div class="card" style="border-radius: 15px;">
             <div class="card-body p-5">
               <h2 class="text-uppercase text-center mb-5">Player Info</h2>
-              <form>
+              <form action="/login" method="post">
                 <div class="form-outline mb-3">
-                  <label class="form-label" for="form3Example1cg">Nickname</label>
-                  <input type="text" id="form3Example1cg" class="form-control form-control-lg" />
+                  <label class="form-label" for="nickname">Nickname</label>
+                  <input type="text" id="nickname" class="form-control form-control-lg" />
                 </div>
                 <div class="form-outline mb-3">
-                  <label class="form-label" for="form3Example3cg">Email</label>
-                  <input type="email" id="form3Example3cg" class="form-control form-control-lg" />
+                  <label class="form-label" for="email">Email</label>
+                  <input type="email" id="email" class="form-control form-control-lg" name="email" pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$" required>
                 </div>
                 <div class="mb-3">
                   <label class="form-label">Select an Option</label>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="option1" value="option1">
+                    <input class="form-check-input" type="radio" name="role" id="option1" value="PLAYER">
                     <label class="form-check-label" for="option1">
                       Player
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="option2" value="option2">
+                    <input class="form-check-input" type="radio" name="role" id="option2" value="ADMIN">
                     <label class="form-check-label" for="option2">
                       Admin
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="option3" value="option3">
+                    <input class="form-check-input" type="radio" name="role" id="option3" value="WRITER">
                     <label class="form-check-label" for="option3">
                       Quest Writer
                     </label>
                   </div>
                 </div>
                 <div class="d-flex justify-content-center">
-                  <button type="button"
+                  <button id="submit" name="submit"
                           class="submit0btn">Enter</button>
                 </div>
               </form>
