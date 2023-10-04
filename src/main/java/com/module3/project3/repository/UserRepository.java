@@ -33,7 +33,7 @@ public class UserRepository {
         session.setAttribute("user", userJson);
     }
 
-    private long genereteUserId(){
+    public long genereteUserId(){
         Random random = new Random();
         long randomUserId = random.nextLong();
         if (randomUserId < 0) {
