@@ -44,10 +44,14 @@ public class QuestQuestionsService {
             if (parts.length >= 2) {
                 String numericPart = parts[1];
                 title = "QUESTION " + numericPart;
-                System.out.println("t" + title);
             }
         } else {
             title = "RESULT";
+            String[] parts = qsValue.split("-");
+            if (parts.length >= 2) {
+                String numericPart = parts[1];
+                checkWins(numericPart, req);
+            }
         }
         HttpSession session = req.getSession(false);
         String questName = (String) session.getAttribute("questName");
@@ -57,5 +61,19 @@ public class QuestQuestionsService {
         req.setAttribute("title", title);
         req.getRequestDispatcher("WEB-INF/quest_room.jsp").forward(req, resp);
     }
+
+    public void checkWins(String resultValue, HttpServletRequest req) {
+        System.out.println("test resukt" + resultValue);
+        HttpSession session = req.getSession(false);
+        Integer winCount = (Integer) session.getAttribute("winCount");
+        if (winCount != null) {
+            if (resultValue.equals("4") || resultValue.equals("5") || resultValue.equals("7")) {
+                winCount++;
+                session.setAttribute("winCount", winCount);
+            }
+        } else {
+            session.setAttribute("winCount", 0);
+        }
     }
+}
 

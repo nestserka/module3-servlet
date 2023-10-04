@@ -21,35 +21,35 @@
             </div>
             <div class="row px-3 py-3">
               <div class="col-lg-6 align-self-center">
-              <c:forEach var="quest" items="${requestScope.quests}">
-                <p class="link-to-quest" style="text-decoration: none";><a href="/quest?id=${quest.id}" style="text-decoration: none";>${quest.questName}</a></p>
-              </c:forEach>
-                </div>
-              <div class="col-lg-6 align-self-center">
-              <p>New Adventure</p>
-                    </div>
-            </div>
-            <div class="row px-3 py-3">
-                        <div class="col-lg-6 align-self-center">
-              <p>Back to 90th</p>
-                        </div>
-                        <div class="col-lg-6 align-self-center">
-              <p>How good are you at Math</p>
-                      </div>
-          </div>
-            <div class="row px-3 py-3">
-              <div class="col-lg-6 align-self-center">
-              <p>Meeting Strangers</p>
+                <c:forEach var="quest" items="${requestScope.quests}">
+                  <p class="link-to-quest" style="text-decoration: none";><a href="/quest?id=${quest.id}" style="text-decoration: none";>${quest.questName}</a></p>
+                </c:forEach>
               </div>
               <div class="col-lg-6 align-self-center">
-              <p>How much can you make in a year?</p>
+                <p>New Adventure</p>
               </div>
             </div>
+            <div class="row px-3 py-3">
+              <div class="col-lg-6 align-self-center">
+                <p>Back to 90th</p>
+              </div>
+              <div class="col-lg-6 align-self-center">
+                <p>How good are you at Math</p>
+              </div>
+            </div>
+            <div class="row px-3 py-3">
+              <div class="col-lg-6 align-self-center">
+                <p>Meeting Strangers</p>
+              </div>
+              <div class="col-lg-6 align-self-center">
+                <p>How much can you make in a year?</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
   </div>
 </section>
 <footer class="bg-dark text-white d-flex justify-content-center align-items-center py-2 fixed-bottom">

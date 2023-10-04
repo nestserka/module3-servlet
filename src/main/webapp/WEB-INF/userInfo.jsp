@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Statistics</title>
+  <title>Member Page</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link href="<c:url value="/css/styles.css" />" rel="stylesheet">
 </head>
@@ -17,16 +17,26 @@
         <div class="col-12 col-md-9 col-lg-7 col-xl-6">
           <div class="card" style="border-radius: 15px;">
             <div class="card-body p-4">
-              <h2 class="text-uppercase text-center mb-2">Statistics</h2>
+              <h2 class="text-uppercase text-center mb-2">Member Page</h2>
             </div>
             <div class="form-outline mb-3 mx-5">
-              <p> <b>Time played:</b> ${stat.gameTime}</p>
+              <p> <b>ID:</b> ${user.id}</p>
             </div>
             <div class="form-outline mb-3 mx-5">
-              <p><b>Total wins:</b> ${stat.winCount}</p>
+              <p><b>EMAIL:</b> ${user.email}</p>
+            </div>
+            <div class="form-outline mb-3 mx-5">
+              <p><b>NICKNAME:</b> ${user.nickname}</p>
+            </div>
+            <div class="form-outline mb-3 mx-5">
+              <p><b>ROLE:</b> ${user.role}</p>
+            </div>
+            <div class="form-outline mb-3 mx-5">
+              <p><b>IP ADDRESS:</b> ${user.ipAddress}</p>
             </div>
             <div class="d-flex mx-5 mb-3 justify-content-evenly">
               <a class="submit0btn" href="/quest">Quests</a>
+              <a class="submit0btn" href="/login?logout=true">Log out</a>
             </div>
           </div>
         </div>

@@ -11,6 +11,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,7 +35,7 @@ public class QuestService {
         }
         req.setAttribute("quests", quests);
         req.getRequestDispatcher("/WEB-INF/quest_list.jsp").forward(req, resp);
-        }
+    }
 
     public void fetchIntroPage(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Quest quest = questRepository.fetchQuestById(Integer.parseInt(req.getParameter("id")));
@@ -42,6 +43,8 @@ public class QuestService {
         req.setAttribute("questName", quest.getQuestName());
         req.setAttribute("description", quest.getDescription());
         HttpSession session = req.getSession(false);
+        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+        session.setAttribute("gameTime",timestamp.getTime());
         session.setAttribute("questName", quest.getQuestName());
         List <QuestQuestions> qsList = questQuestionsService.fetchListOfQuestions(Integer.parseInt(req.getParameter("id")));
         if (!qsList.isEmpty()) {

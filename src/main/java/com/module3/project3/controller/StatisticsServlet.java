@@ -23,7 +23,4 @@ public class StatisticsServlet extends HttpServlet {
         req.setAttribute("stat", statistics);
         req.getRequestDispatcher("WEB-INF/statistics.jsp").forward(req, resp);
     }
-
-
-
 }

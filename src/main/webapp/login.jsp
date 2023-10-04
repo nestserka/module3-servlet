@@ -21,7 +21,7 @@
               <form action="/login" method="post">
                 <div class="form-outline mb-3">
                   <label class="form-label" for="nickname">Nickname</label>
-                  <input type="text" id="nickname" class="form-control form-control-lg" />
+                  <input type="text" id="nickname" name="nickname" class="form-control form-control-lg" />
                 </div>
                 <div class="form-outline mb-3">
                   <label class="form-label" for="email">Email</label>

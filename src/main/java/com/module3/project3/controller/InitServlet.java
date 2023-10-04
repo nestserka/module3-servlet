@@ -14,13 +14,22 @@ import java.io.IOException;
 public class InitServlet extends HttpServlet {
 
     UserService userService = new UserService();
-    QuestService questService = new QuestService();
+//    QuestService questService = new QuestService();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 //        ** parse was called in order to create the json file for the quests
 //        questService.createQuestList();
-        getServletContext().getRequestDispatcher("/login.jsp").forward(req, resp);
+        String userId = req.getParameter("user");
+        boolean logout = Boolean.parseBoolean(req.getParameter("logout"));
+        if (userId != null) {
+            userService.findUserById(Long.parseLong(userId), req, resp);
+        } else {
+            if (logout){
+                req.getSession().invalidate();
+            }
+            getServletContext().getRequestDispatcher("/login.jsp").forward(req, resp);
+        }
     }
 
     @Override
@@ -28,21 +37,4 @@ public class InitServlet extends HttpServlet {
         userService.saveUserById(req);
         resp.sendRedirect("/quest");
     }
-
-
-
-
-//        // ЗАПИСАЛИ НОВЫЕ ДАННЫЕ В БАЗУ ДАННЫХ
-//        userService.updateUserById(id, newLogin, newPassword);
-//
-//        // ВЫВЕДЕМ И НА КОНСОЛЬ
-//        System.out.println(userService.getUserById(id));
-//
-//        // ИДЕМ ОПЯТЬ НА ТУ ЖЕ СТРАНИЦУ И УВИДИМ НА СТРАНИЦЕ ИЗМЕНЕНИЯ
-//        User userById = userService.getUserById(id);
-//        request.setAttribute("user", userById);
-//
-//        RequestDispatcher requestDispatcher = request.getRequestDispatcher("WEB-INF/user.jsp");
-//        requestDispatcher.forward(request, response);
-
-    }
+}

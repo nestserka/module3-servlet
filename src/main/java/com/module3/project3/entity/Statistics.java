@@ -6,18 +6,11 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Statistics {
-    private String ipAddress;
-    private String place;
-    private String direction;
-    private String item;
     private String gameTime;
+    private Integer winCount;
 
-
-    public Statistics(String ipAddress, String place, String direction, String item, String gameTime) {
-        this.ipAddress = ipAddress;
-        this.place = place;
-        this.direction = direction;
-        this.item = item;
+    public Statistics(String gameTime, Integer winCount) {
         this.gameTime = gameTime;
+        this.winCount = winCount;
     }
 }

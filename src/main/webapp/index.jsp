@@ -11,46 +11,46 @@
 </head>
 <body class="d-flex flex-column min-vh-100">
 <header class="custom-header text-white text-center py-4">
-            <div class="main-title">
-                <h1><c:out value="${questName}" /></h1>
-            </div>
+    <div class="main-title">
+        <h1><c:out value="${questName}" /></h1>
+    </div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Quest Menu</a>
+                    <a class="nav-link" href="/quest">Quest Menu</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Member Menu</a>
+                    <a class="nav-link" href="/login?user=${userId}">Member Menu</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Log out</a>
+                    <a class="nav-link" href="/login?logout=true">Log out</a>
                 </li>
             </ul>
         </div>
     </nav>
 </header>
 <main class="container custom-mt d-flex align-items-center justify-content-center">
-<div class="mask d-flex align-items-center h-100">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-        <div class="col-11 col-md-11 col-lg-7 col-xl-8">
-            <div class="card" style="border-radius: 15px;">
-                <div class="card-body p-5">
-                    <div class="form-outline mb-3" style="font-size: 25px;">
-                        <p><c:out value="${description}" /></p>
-                        <div class="d-flex justify-content-center mt-4">
-                            <a class="button-choice" href="/quest?id=${id}&qs=${firstQuestion.qsNo}">Yes</a>
-                            <a class="button-choice" href="javascript:void(0);" onclick="showMessage()">No</a>
-                        </div>
-                        <div class="d-flex justify-content-center mt-2">
-                            <p id="message"></p>
+    <div class="mask d-flex align-items-center h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-11 col-md-11 col-lg-7 col-xl-8">
+                <div class="card" style="border-radius: 15px;">
+                    <div class="card-body p-5">
+                        <div class="form-outline mb-3" style="font-size: 25px;">
+                            <p><c:out value="${description}" /></p>
+                            <div class="d-flex justify-content-center mt-4">
+                                <a class="button-choice" href="/quest?id=${id}&qs=${firstQuestion.qsNo}">Yes</a>
+                                <a class="button-choice" href="javascript:void(0);" onclick="showMessage()">No</a>
+                            </div>
+                            <div class="d-flex justify-content-center mt-2">
+                                <p id="message"></p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 </main>
 <footer class="bg-dark text-white d-flex justify-content-center align-items-center py-2 fixed-bottom">
     <div class="d-flex flex-row gap-3">

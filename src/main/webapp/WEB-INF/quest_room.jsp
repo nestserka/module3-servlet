@@ -5,13 +5,27 @@
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="<c:url value="/icon/favicon-32x32.png" />">
+    <link rel="icon" href="<c:url value="/icon/favicon-32x32.png" />">
     <link href="<c:url value="/css/styles.css" />" rel="stylesheet">
-  <title>Memory Quest</title>
+    <title>Memory Quest</title>
 </head>
-
 <body class="d-flex flex-column min-vh-100">
-<header class="text-white text-center py-4"><h1><c:out value="${questName}" /></h1></header>
+<header class="text-white text-center py-4"><h1><c:out value="${questName}" /></h1>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/quest">Quest Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/login?user=${userId}">Member Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/login?logout=true">Log out</a>
+                </li>
+            </ul>
+        </div>
+    </nav></header>
 <main class="container custom-mt d-flex align-items-center justify-content-center">
     <div class="mask d-flex align-items-center h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
@@ -21,20 +35,26 @@
                         <h2 class="text-uppercase text-center mb-5"><c:out value="${title}" /></h2>
                         <div class="form-outline mb-3" style="font-size: 25px;">
                             <p><c:out value="${question.qsDescription}"/></p>
+                            <c:if test="${question.qsType eq 'result'}">
+                                <div class="d-flex mx-5 mb-3 justify-content-evenly">
+                                    <a class="submit0btn" href="/quest">Quests</a>
+                                    <a class="submit0btn" href="/statistics">Statistics</a>
+                                </div>
+                            </c:if>
                         </div>
                         <div class="form-outline mb-3" style="font-size: 24px;">
                             <c:if test="${question.qsType eq 'input'}">
                                 <c:if test="${question.answersType ne null}">
                                     <c:forEach items="${question.answersType}" var="answer">
-                                <form action="/quest?id=${id}&qs=${answer.qsNo}" method="post">
-                                    <label for="place"></label>
-                                    <div class="custom-width-input">
-                                        <input class="form-control form-control-lg" id="place" name="place" type="text" value="${answer.value}" pattern="[A-Za-z]+" placeholder="Type the place here" required>
-                                    </div>
-                                    <div class="d-flex justify-content-center mt-4">
-                                        <button id="submit" name="submit" class="submit0btn">Continue</button>
-                                    </div>
-                                </form>
+                                        <form action="/quest?id=${id}&qs=${answer.qsNo}" method="post">
+                                            <label for="place"></label>
+                                            <div class="custom-width-input">
+                                                <input class="form-control form-control-lg" id="place" name="place" type="text" value="${answer.value}" pattern="[A-Za-z]+" placeholder="Type the place here" required>
+                                            </div>
+                                            <div class="d-flex justify-content-center mt-4">
+                                                <button id="submit" name="submit" class="submit0btn">Continue</button>
+                                            </div>
+                                        </form>
                                     </c:forEach>
                                 </c:if>
                             </c:if>
@@ -67,10 +87,10 @@
         </div>
         <div class="footer-item">
             <a href="https://www.linkedin.com/in/katsiaryna-nestserava-4b6320266/"><img src="<c:url value="/icon/linkedin.png"/>" alt="Instagram"/></a>
-    </div>
+        </div>
         <div class="footer-item">
             <a href="https://www.instagram.com/mercy_codes/?igshid=NGVhN2U2NjQ0Yg%3D%3D"><img src="<c:url value="/icon/instagram.png"/>" alt="Medium"/></a>
-    </div>
+        </div>
     </div>
 </footer>
 <script>
