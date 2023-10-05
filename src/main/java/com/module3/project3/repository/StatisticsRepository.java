@@ -7,7 +7,7 @@ import java.sql.Timestamp;
 
 public class StatisticsRepository {
 
-    public Statistics findUserData(HttpServletRequest req){
+    public Statistics findUserGameData(HttpServletRequest req){
         HttpSession session = req.getSession(false);
         Integer winCount = (Integer) session.getAttribute("winCount");
         Long gameTime = (Long) session.getAttribute("gameTime");

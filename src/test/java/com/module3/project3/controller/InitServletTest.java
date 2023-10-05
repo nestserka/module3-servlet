@@ -1,11 +1,8 @@
 package com.module3.project3.controller;
 
 import com.module3.project3.service.UserService;
-import jakarta.servlet.RequestDispatcher;
-import jakarta.servlet.ServletContext;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
@@ -26,14 +23,6 @@ public class InitServletTest {
     private HttpServletResponse response;
 
     private InitServlet initServlet;
-
-    @Mock
-    private ServletContext servletContext;
-    @Mock
-    private HttpSession session;
-
-    @Mock
-    private RequestDispatcher requestDispatcher;
 
 
     @BeforeEach

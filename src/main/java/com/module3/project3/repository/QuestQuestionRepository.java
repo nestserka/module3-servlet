@@ -18,8 +18,10 @@ public class QuestQuestionRepository {
     private Gson gson = new Gson();
 
     public List<QuestQuestions> fetchListOfQuestions(int id) {
+        if (id < 0) {
+            throw new IllegalArgumentException();
+        }
         List<QuestQuestions> questionsList = new ArrayList<>();
-
         try {
             URL resourceUrl = getClass().getClassLoader().getResource("memory_game.json");
             if (resourceUrl != null) {

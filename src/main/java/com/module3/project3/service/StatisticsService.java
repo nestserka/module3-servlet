@@ -10,6 +10,6 @@ public class StatisticsService {
     StatisticsRepository statRepository = new StatisticsRepository();
 
     public Statistics findUserData(HttpServletRequest req){
-        return statRepository.findUserData(req);
+        return statRepository.findUserGameData(req);
     }
 }

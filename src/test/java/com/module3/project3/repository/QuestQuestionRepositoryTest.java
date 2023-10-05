@@ -7,12 +7,13 @@ import org.junit.jupiter.api.Test;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class QuestQuestionRepositoryTest {
     private QuestQuestionRepository questQuestionRepository = new QuestQuestionRepository();
 
     @Test
-    public void testFetchListOfQuestionsByQuestId() {
+    public void Validate_ListOfQuestions_By_QuestId() {
         int questId = 1;
         List<QuestQuestions> questionsList = questQuestionRepository.fetchListOfQuestions(questId);
         assertEquals(12, questionsList.size());
@@ -32,9 +33,10 @@ public class QuestQuestionRepositoryTest {
     }
 
     @Test
-    public void testFetchListOfQuestionsWithInvalidId(){
-        int questId = -1;
-        List<QuestQuestions> questionsList = questQuestionRepository.fetchListOfQuestions(questId);
-        assertEquals(0, questionsList.size());
+    public void When_QuestId_IsInvalid_ThrowException(){
+        int invalidQuestId = -1;
+        assertThrows(IllegalArgumentException.class, () -> {
+            questQuestionRepository.fetchListOfQuestions(invalidQuestId);
+        });
     }
 }

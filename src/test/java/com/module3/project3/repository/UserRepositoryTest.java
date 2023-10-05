@@ -33,7 +33,7 @@ public class UserRepositoryTest {
     }
 
     @Test
-    public void testSavingUserById() {
+    public void Should_Save_UserById_With_A_Given_Parameters() {
         when(request.getParameter("nickname")).thenReturn("John");
         when(request.getParameter("email")).thenReturn("john@example.com");
         when(request.getParameter("role")).thenReturn("PLAYER");
@@ -47,9 +47,10 @@ public class UserRepositoryTest {
     }
 
     @Test
-    public void testGeneratingUserId() {
+    public void Should_Generate_NonNegative_UserId_Within_Allowed_Range() {
         long userId = userRepository.genereteUserId();
         assertTrue(userId >= 0, "User ID should be non-negative");
         assertTrue(userId <= Long.MAX_VALUE, "User ID should be within the allowed range");
     }
 }
+
