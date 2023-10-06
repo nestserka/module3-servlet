@@ -38,7 +38,7 @@ public class QuestServletTest {
     }
 
     @Test
-    public void testDoGetWithNullParameters() throws Exception {
+    public void Should_Redirect_To_ListOfQuests_ifUserExist() throws Exception {
         when(request.getSession(false)).thenReturn(session);
         when(session.getAttribute("user")).thenReturn("{\"id\": 123}");
         questServlet.doGet(request, response);
@@ -48,7 +48,7 @@ public class QuestServletTest {
     }
 
     @Test
-    public void testDoGetQuestDataWithParameters() throws Exception {
+    public void Validate_QuestData_With_Parameters() throws Exception {
         when(request.getSession(false)).thenReturn(session);
 
 //        **Full User model was not used but just simplified for testing purposes
@@ -62,7 +62,7 @@ public class QuestServletTest {
     }
 
     @Test
-    public void Redirect_To_NewQuestion_When_AnswerParamsAreGiven() throws Exception {
+    public void Should_Redirect_To_NewQuestion_When_AnswerParamsAreGiven() throws Exception {
         when(request.getRequestURL()).thenReturn(new StringBuffer("http://localhost:8080/quest"));
         when(request.getParameter("qs")).thenReturn("Q-2");
         when(request.getParameter("id")).thenReturn("1");

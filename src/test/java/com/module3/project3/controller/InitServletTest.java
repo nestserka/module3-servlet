@@ -33,7 +33,7 @@ public class InitServletTest {
     }
 
     @Test
-    public void testDoPost() throws Exception {
+    public void Should_Redirect_To_QuestPage_When_UserIsSaved() throws Exception {
         initServlet.doPost(request, response);
         verify(userService, times(1)).saveUserById(request);
         verify(response).sendRedirect("/quest");

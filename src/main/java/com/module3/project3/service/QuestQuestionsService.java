@@ -63,17 +63,19 @@ public class QuestQuestionsService {
     }
 
     public void checkWins(String resultValue, HttpServletRequest req) {
-        System.out.println("test resukt" + resultValue);
         HttpSession session = req.getSession(false);
-        Integer winCount = (Integer) session.getAttribute("winCount");
-        if (winCount != null) {
-            if (resultValue.equals("4") || resultValue.equals("5") || resultValue.equals("7")) {
-                winCount++;
-                session.setAttribute("winCount", winCount);
-            }
-        } else {
-            session.setAttribute("winCount", 0);
+        if (session == null) {
+            throw new NullPointerException("Session is null. Cannot proceed.");
         }
+        Integer winCount = (Integer) session.getAttribute("winCount");
+            if (winCount != null) {
+                if (resultValue.equals("4") || resultValue.equals("5") || resultValue.equals("7")) {
+                    winCount++;
+                    session.setAttribute("winCount", winCount);
+                }
+            } else {
+                session.setAttribute("winCount", 0);
+            }
     }
 }
 
