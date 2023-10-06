@@ -36,13 +36,13 @@
         {
           "qsAnswers":"null",
           "qsNo":"R-6",
-          "qsDescription":"You decide to take the treasure directly from the creature, ignoring any potential risks. Creature took you under water. Game Over.",
+          "qsDescription":"You suddenly find yourself questioning the reality of the mermaid-like creature and your entire journey. Just as you say this, you wake up in a hospital bed, surrounded by medical equipment. It turns out that your entire adventure was a vivid dream. You've regained consciousness, and your memory slowly starts returning as the fog lifts.",
           "qsType":"result"
         },
         {
           "qsAnswers":"null",
           "qsNo":"R-7",
-          "qsDescription":"The creature lunges at you, but you deftly evade its attack, demonstrating your combat prowess. With swift and precise strikes, you fend off the creature, driving it back. Your skills resemble those of a masterful monster hunter.As you defeat the mermaid-like creature, a newfound sense of identity washes over you. You are not just anyone; you are a Witcher, a skilled warrior who specializes in combating monsters and protecting the world from supernatural threats. Your lost memory may still hold many secrets, but you now know your true calling.",
+          "qsDescription":"The creature lunges at you, but you deftly evade its attack, demonstrating your combat prowess. Your skills resemble those of a masterful monster hunter.As you defeat the mermaid-like creature, a newfound sense of identity washes over you. You are not just anyone; you are a Witcher, a skilled warrior who specializes in combating monsters.",
           "qsType":"result"
         },
         {
@@ -60,7 +60,7 @@
         {
           "qsAnswers":"null",
           "qsNo":"R-3",
-          "qsDescription":"Wrong answer. Way too wrong answer. Creature does not even knows what pan is. Game over.",
+          "qsDescription":"Wrong answer. Way too wrong answer. Creature does not even knows what pen is. Game over.",
           "qsType":"result"
         },
         {
@@ -72,7 +72,7 @@
         {
           "qsAnswers":"null",
           "qsNo":"R-5",
-          "qsDescription":"You suddenly find yourself questioning the reality of the mermaid-like creature and your entire journey. Just as you say this, you wake up in a hospital bed, surrounded by medical equipment. It turns out that your entire adventure was a vivid dream. You've regained consciousness, and your memory slowly starts returning as the fog lifts.",
+          "qsDescription":"You decide to take the treasure directly from the creature, ignoring any potential risks. Creature took you under water. Game Over.",
           "qsType":"result"
         }
       ],
