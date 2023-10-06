@@ -4,7 +4,8 @@
 *Comment for Yura (note: comment will be deleted from readme after checking the project): Здравствуйте! Я опаздала с работой, тк была в отпуске! Я писала заранее об этом вам в слак-канале! Решила уточнить сразу этот вопрос, потому что по гитхабу может быть не совсем явно - что это я! 
 Ответы на все вопросы в секции Correct Answers for Quests.*
 
-<img width="899" alt="Screenshot 2023-10-06 at 7 36 07 PM" src="https://github.com/nestserka/module3-servlet/assets/78704791/31b3d9be-fd92-40c5-9cbc-9481c7a0a9bd">
+
+<img width="899" alt="Screenshot 2023-10-06 at 7 36 07 PM" src="https://github.com/nestserka/module3-servlet/assets/78704791/0067a4d8-4dc0-4be8-a527-e451f9be7f89">
 
 
 
@@ -17,6 +18,7 @@
 - Tomcat: Version 10.1.13
 - Gson Library: Version 2.10.1
 - JUnit 5
+- Bootstrap for page design
 
 ### How to Run
 This project requires a local server. Follow the steps below to set it up:
@@ -27,7 +29,9 @@ This project requires a local server. Follow the steps below to set it up:
 
 Example:
 
-<img width="1046" alt="Screenshot 2023-10-06 at 7 23 04 PM" src="https://github.com/nestserka/module3-servlet/assets/78704791/d8b97f71-3c41-4ba4-971b-ab69a3c161df">
+
+<img width="1046" alt="Screenshot 2023-10-06 at 7 23 04 PM" src="https://github.com/nestserka/module3-servlet/assets/78704791/244e09f7-c18b-4c1c-96b0-3d9d9c1aa08e">
+
 
 
 5. Add the artifact: `module3_final_project_war: exploded`.
