@@ -42,7 +42,11 @@ Example:
 - Quest questions and answers dynamically load into JSP pages from Servlets.
 - Statistics page: displays total wins and time spent in quests.
 - User personal page and logout function that clears the session.
-- Includes 11 tests for Servlets.
+- Includes 11 tests for Servlets:
+  
+![Screenshot_2](https://github.com/nestserka/module3-servlet/assets/78704791/bdb4cefe-a921-48d7-9165-79c264cd9a9e)
+
+
 
 ## Possible Issues and Solutions
 
