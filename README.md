@@ -12,7 +12,7 @@
 ## Task: Create a Maven project using Servlets, JSP, and JSTL.
 
 ### Technology Stack:
-- Java: Version 11 (also compatible with Java 20)
+- Java: Version 20 (also compatible with Java 11)
 - Maven: Version 3.9.3
 - Java EE 8
 - Tomcat: Version 10.1.13
