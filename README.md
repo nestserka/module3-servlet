@@ -1,10 +1,6 @@
 # Quest Application
 
 
-*Comment for Yura (note: comment will be deleted from readme after checking the project): Здравствуйте! Я опаздала с работой, тк была в отпуске! Я писала заранее об этом вам в слак-канале! Решила уточнить сразу этот вопрос, потому что по гитхабу может быть не совсем явно - что это я! 
-Ответы на все вопросы в секции Correct Answers for Quests.*
-
-
 <img width="899" alt="Screenshot 2023-10-06 at 7 36 07 PM" src="https://github.com/nestserka/module3-servlet/assets/78704791/0067a4d8-4dc0-4be8-a527-e451f9be7f89">
 
 
